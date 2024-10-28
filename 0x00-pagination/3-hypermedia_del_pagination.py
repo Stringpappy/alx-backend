@@ -1,4 +1,3 @@
-        
 #!/usr/bin/env python3
 """pargination module that accept
 two integer args:
@@ -35,7 +34,8 @@ class Server:
         if self.__indexed_dataset is None:
             dataset = self.dataset()
             truncated_dataset = dataset[:1000]
-            self.__indexed_dataset = {i: dataset[i] for i in range(len(dataset))}
+            ll = len(dataset)
+            self.__indexed_dataset = {i: dataset[i] for i in range(l)}
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
@@ -73,4 +73,3 @@ class Server:
             "page_size": page_size,
             "data": data,
         }
-
