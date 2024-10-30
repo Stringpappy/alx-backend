@@ -2,6 +2,7 @@
 """caching module"""
 from base_caching import BaseCaching
 
+
 class LIFOCache(BaseCaching):
     """LIFOCache  Cache class that inherits from BaseCaching."""
 
