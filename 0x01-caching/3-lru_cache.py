@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-cching module"""
-from BaseCaching import BaseCaching
+ching module"""
+from base_caching import BaseCaching
+
 
 class LRUCache(BaseCaching):
     """LRU Cache class that inherits from BaseCaching."""
