@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 from Base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
@@ -17,13 +17,12 @@ class LIFOCache(BaseCaching):
 
         if key not in self.cache_data:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-                # Remove the first item (FIFO)
-                latest_key = self.order.pop()  # Get the first added key
-                del self.cache_data[latest_key]  # Remove it from the cache
+                latest_key = self.order.pop()
+                del self.cache_data[latest_key]
                 print(f"DISCARD: {latest_key}")
 
         self.cache_data[key] = item
-        self.order.append(key)  # Add the key to the order list
+        self.order.append(key)
 
     def get(self, key):
         """Get an item from the cache."""
