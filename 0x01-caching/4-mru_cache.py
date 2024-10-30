@@ -4,6 +4,7 @@ caching module
 """
 from base_caching import BaseCaching
 
+
 class MRUCache(BaseCaching):
     """MRU Cache class that inherits from BaseCaching."""
 
